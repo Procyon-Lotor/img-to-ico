@@ -16,7 +16,9 @@ const ctx = canvas.getContext("2d");
 
 // Reads and converts every valid file in input folder
 (async () => {
-    const files = fs.readdirSync(inputFolder);
+    const files = fs.readdirSync(inputFolder).filter((file) => {
+        return file != ".gitignore";
+    });
     console.log(`\nAttempting to convert ${files.length} file(s) . . .\n`);
     for(let file of files) {
         try {
