@@ -19,7 +19,7 @@ if(!fs.existsSync(outputFolder))
 
 // Reads and converts every valid file in input folder
 const files = fs.readdirSync(inputFolder);
-console.log(`\nAttempting to convert ${files.length} file(s) . . .`);
+console.log(`Attempting to convert ${files.length} file(s) . . .`);
 files.forEach((file) => {
     loadImage(inputFolder + file).then((image) => {
         // Prepare canvas and scale image to fit declared size
@@ -42,4 +42,3 @@ files.forEach((file) => {
         console.log(clc.red(`\t[     error     ] ${file}`));
     });
 });
-console.log();
