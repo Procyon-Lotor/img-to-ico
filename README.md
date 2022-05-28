@@ -1,4 +1,4 @@
-# png-to-ico
+# img-to-ico
 A node program that batch converts image files to ico
 ## How to use
 1. Download the source code
